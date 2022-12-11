@@ -10,7 +10,7 @@ class SignInScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Sign In"),
       ),
-      body: Body(),
+      body: SafeArea(child: Body()),
     );
   }
 }

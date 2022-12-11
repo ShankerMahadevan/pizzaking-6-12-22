@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/components/default_button.dart';
-import 'package:shoppingmaster/size_config.dart';
 
+import '../../../components/default_button.dart';
 import '../../../constants.dart';
+import '../../../size_config.dart';
 
 class OtpForm extends StatefulWidget {
   const OtpForm({

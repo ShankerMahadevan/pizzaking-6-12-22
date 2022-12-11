@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/components/socal_card.dart';
-import 'package:shoppingmaster/constants.dart';
-import 'package:shoppingmaster/size_config.dart';
+import 'package:pizzaking/screens/splash/splash_screen.dart';
 
+
+import '../../../components/socal_card.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 import 'sign_up_form.dart';
 
 class Body extends StatelessWidget {
@@ -31,7 +33,18 @@ class Body extends StatelessWidget {
                   children: [
                     SocalCard(
                       icon: "assets/icons/google-icon.svg",
-                      press: () {},
+                      press: () {
+                       signInWithGoogle().then((result) {
+                       if (result != null) {
+                       Navigator.of(context).push(
+                        MaterialPageRoute(
+                        builder: (context) {
+                           return SplashScreen());
+    },
+    ),
+    );
+    }
+                      },
                     ),
                     SocalCard(
                       icon: "assets/icons/facebook-2.svg",

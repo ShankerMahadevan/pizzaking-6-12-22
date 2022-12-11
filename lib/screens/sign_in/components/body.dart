@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/components/no_account_text.dart';
-import 'package:shoppingmaster/components/socal_card.dart';
+import '../../../components/no_account_text.dart';
+import '../../../components/socal_card.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SizedBox(
-        width: double.infinity,
-        child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SingleChildScrollView(
+    return  SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04),
@@ -53,9 +47,8 @@ class Body extends StatelessWidget {
                 NoAccountText(),
               ],
             ),
-          ),
-        ),
-      ),
+
+
     );
   }
 }

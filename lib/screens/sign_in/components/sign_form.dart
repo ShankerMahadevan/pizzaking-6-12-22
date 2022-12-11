@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/components/custom_surfix_icon.dart';
-import 'package:shoppingmaster/components/form_error.dart';
-import 'package:shoppingmaster/helper/keyboard.dart';
-import 'package:shoppingmaster/screens/forgot_password/forgot_password_screen.dart';
-import 'package:shoppingmaster/screens/login_success/login_success_screen.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import '../../../components/custom_surfix_icon.dart';
 import '../../../components/default_button.dart';
+import '../../../components/form_error.dart';
 import '../../../constants.dart';
+import '../../../helper/keyboard.dart';
 import '../../../size_config.dart';
+import '../../forgot_password/forgot_password_screen.dart';
+import '../../login_success/login_success_screen.dart';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
 
 class SignForm extends StatefulWidget {
   @override
@@ -27,6 +36,7 @@ class _SignFormState extends State<SignForm> {
         errors.add(error);
       });
   }
+
 
   void removeError({String? error}) {
     if (errors.contains(error))
@@ -62,7 +72,7 @@ class _SignFormState extends State<SignForm> {
                 onTap: () => Navigator.pushNamed(
                     context, ForgotPasswordScreen.routeName),
                 child: Text(
-                  "Forgot Password",
+                  "Forgot Password?",
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
               )
@@ -72,7 +82,7 @@ class _SignFormState extends State<SignForm> {
           SizedBox(height: getProportionateScreenHeight(20)),
           DefaultButton(
             text: "Continue",
-            press: () {
+              press:  () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen

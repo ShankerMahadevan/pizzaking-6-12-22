@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/routes.dart';
-import 'package:shoppingmaster/screens/profile/profile_screen.dart';
-import 'package:shoppingmaster/screens/splash/splash_screen.dart';
-import 'package:shoppingmaster/theme.dart';
+import 'package:pizzaking/screens/sign_in/sign_in_screen.dart';
+import 'package:pizzaking/screens/test/testt.dart';
+import '../routes.dart';
+import '../screens/profile/profile_screen.dart';
+import '../screens/splash/splash_screen.dart';
+import '../theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,11 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+    //  title: 'Flutter Demo',
       theme: theme(),
-      // home: SplashScreen(),
-      // We use routeName so that we dont need to remember the name
-      initialRoute: SplashScreen.routeName,
+  home: SplashScreen(),
+     initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }

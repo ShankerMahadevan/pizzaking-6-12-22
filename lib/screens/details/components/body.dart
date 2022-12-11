@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/components/default_button.dart';
-import 'package:shoppingmaster/models/Product.dart';
-import 'package:shoppingmaster/size_config.dart';
 
+import '../../../components/default_button.dart';
+import '../../../models/Product.dart';
+import '../../../size_config.dart';
 import 'color_dots.dart';
 import 'product_description.dart';
 import 'top_rounded_container.dart';

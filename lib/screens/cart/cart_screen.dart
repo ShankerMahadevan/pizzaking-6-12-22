@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/models/Cart.dart';
 
+import '../../models/Cart.dart';
 import 'components/body.dart';
 import 'components/check_out_card.dart';
 

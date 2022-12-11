@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/components/custom_surfix_icon.dart';
-import 'package:shoppingmaster/components/default_button.dart';
-import 'package:shoppingmaster/components/form_error.dart';
-import 'package:shoppingmaster/screens/otp/otp_screen.dart';
 
+
+import '../../../components/custom_surfix_icon.dart';
+import '../../../components/default_button.dart';
+import '../../../components/form_error.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import '../../otp/otp_screen.dart';
 
 class CompleteProfileForm extends StatefulWidget {
   @override

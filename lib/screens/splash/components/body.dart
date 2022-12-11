@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/constants.dart';
-import 'package:shoppingmaster/screens/sign_in/sign_in_screen.dart';
-import 'package:shoppingmaster/size_config.dart';
+
 
 // This is the best practice
+import '../../../constants.dart';
+import '../../../size_config.dart';
+import '../../sign_in/sign_in_screen.dart';
 import 'splash_content.dart';
 import '../../../components/default_button.dart';
 

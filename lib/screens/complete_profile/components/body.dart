@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/constants.dart';
-import 'package:shoppingmaster/size_config.dart';
 
+import '../../../constants.dart';
+import '../../../size_config.dart';
 import 'complete_profile_form.dart';
 
 class Body extends StatelessWidget {

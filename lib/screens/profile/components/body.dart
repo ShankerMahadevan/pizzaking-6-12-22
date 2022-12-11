@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingmaster/screens/sign_in/sign_in_screen.dart';
 
+import '../../sign_in/sign_in_screen.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
 
